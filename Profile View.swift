@@ -37,6 +37,9 @@ struct ProfileView: View {
             Button("|Today's Work|") {
                 gameState.viewState = 4;
                 }
+            Button("|Sleep Log|"){
+                gameState.viewState = 5;
+                }
             }
         }
     }

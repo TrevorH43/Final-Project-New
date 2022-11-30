@@ -28,6 +28,8 @@ struct FormCreation: App {
                 WorkoutView().environmentObject(gameState);
             }else if (gameState.viewState == 4){
                 TodaysView().environmentObject(gameState);
+            } else if (gameState.viewState == 5){
+                SleepView().environmentObject(gameState);
             }
         }
     }

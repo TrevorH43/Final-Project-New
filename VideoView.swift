@@ -23,24 +23,24 @@ struct VideoView: View {
                             .foregroundColor(.black)
                             .background(.white.opacity(0.7))
                     }
-                    VideoPlayer(player: AVPlayer(url: URL(string:"https://www.youtube.com/watch?v=SCVCLChPQFY")!))
-                        .frame(height: 200)
+                        VideoPlayer(player: AVPlayer(url:  Bundle.main.url(forResource: "hangclean", withExtension: "mp4")!))
+                            .frame(height: 200)
                     VStack{
-                        Text("Bench Press")
+                        Text("Hang Clean")
                             .foregroundColor(.black)
                             .background(.white.opacity(0.7))
                     }
-                    VideoPlayer(player: AVPlayer(url: URL(string:"https://www.youtube.com/watch?v=ultWZbUMPL8")!))
-                        .frame(height: 200)
+                        VideoPlayer(player: AVPlayer(url:  Bundle.main.url(forResource: "squat", withExtension: "mp4")!))
+                            .frame(height: 200)
                     VStack{
                         Text("Squat")
                             .foregroundColor(.black)
                             .background(.white.opacity(0.7))
                     }
-                    VideoPlayer(player: AVPlayer(url: URL(string:"https://www.youtube.com/watch?v=TjTEOme9fvw")!))
-                        .frame(height: 200)
+                        VideoPlayer(player: AVPlayer(url:  Bundle.main.url(forResource: "benchpress", withExtension: "mp4")!))
+                            .frame(height: 200)
                     VStack{
-                        Text("Hang Clean")
+                        Text("Bench Press")
                             .foregroundColor(.black)
                             .background(.white.opacity(0.7))
                     }
@@ -55,6 +55,9 @@ struct VideoView: View {
                         }
                         Button("|Today's Work|") {
                             gameState.viewState = 4;
+                            }
+                        Button("|Sleep Log|"){
+                            gameState.viewState = 5;
                             }
                         }
                     }
